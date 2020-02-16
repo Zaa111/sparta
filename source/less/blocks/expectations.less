@@ -1,0 +1,55 @@
+.expectations {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.expectations__title {
+  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: @action-color;
+  line-height: 32px;
+
+  padding: 30px 0;
+  margin: 0;
+  margin-bottom: 50px;
+
+  text-align: center;
+
+  background-image: url(../img/expectations-bg-text.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.expectations__list {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.expectations__item {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+@media(min-width: 750px) {
+  .expectations__title {
+    font-size: 34px;
+  }
+
+  .expectations__list {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

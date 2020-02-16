@@ -1,0 +1,55 @@
+.knowledge-item {
+  margin-bottom: 48px;
+}
+
+.knowledge-item__img {
+  width: 110px;
+  height: 94px;
+
+  margin-bottom: 30px;
+}
+
+.knowledge-item__title {
+  font-size: @subtitle-font-size;
+  color: @primary-color;
+  text-align: center;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.knowledge-item__desc {
+  color: @primary-color;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+}
+
+
+@media(min-width: 750px) {
+  .knowledge-item__desc {
+    width: 300px;
+
+    text-align: left;
+  }
+}
+
+@media(min-width: 1170px) {
+  .knowledge-item {
+    margin-bottom: 0;
+  }
+
+  .knowledge-item__img {
+    align-self: center;
+
+    margin: 0 48px 0 0;
+  }
+
+  .knowledge-item__inner-text {
+    display: flex;
+    flex-direction: column;
+  }
+}

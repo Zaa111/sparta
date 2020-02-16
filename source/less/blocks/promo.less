@@ -1,0 +1,131 @@
+.promo {
+  text-align: center;
+}
+
+.promo__highlight {
+  font-size: 102px;
+  line-height: 90px;
+  color: @action-color;
+  text-transform: uppercase;
+  font-family: "Besom", "Arial";
+  display: block;
+  margin-bottom: 15px;
+}
+
+.promo__title {
+  font-size: 33px;
+  color: #ffffff;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 37px;
+  text-transform: uppercase;
+}
+
+.promo__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 71px;
+}
+
+.promo__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 205px;
+  justify-content: space-between;
+  margin-right: 13px;
+}
+
+.promo__day {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  &--center {
+    position: relative;
+    &::before {
+      content: "";
+      width: 58px;
+      height: 5px;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      margin-top: -2.5px;
+      background-color: #ffffff;
+    }
+
+    &::after {
+      content: "";
+      width: 58px;
+      height: 5px;
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -2.5px;
+      background-color: #ffffff;
+    }
+  }
+}
+
+.promo__desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  width: 80px;
+  line-height: 16px;
+}
+
+.promo__button {
+  display: block;
+  width: 307px;
+  height: 73px;
+  text-align: center;
+  line-height: 73px;
+  margin: 0 auto;
+
+  background-image: url(../img/button-bg.png);
+}
+
+
+@media(min-width: 750px) {
+  .promo {
+    text-align: center;
+  }
+
+  .promo__highlight {
+    font-size: 120px;
+  }
+
+  .promo__wrapper {
+    justify-content: center;
+  }
+
+  .promo__list {
+    margin-right: 33px;
+  }
+}
+
+
+@media(min-width: 1170px) {
+  .promo {
+    text-align: left;
+  }
+
+  .promo__wrapper {
+    justify-content: start;
+  }
+
+  .promo__button {
+    margin: 0;
+  }
+}
