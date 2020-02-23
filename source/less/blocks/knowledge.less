@@ -1,17 +1,16 @@
 .knowledge__title {
-  font-size: 32px;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: @action-color;
-  line-height: 32px;
-
   padding: 30px 0;
   margin: 0;
   margin-bottom: 50px;
 
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 32px;
+  color: @action-color;
+  text-transform: uppercase;
   text-align: center;
 
-  background-image: url(../img/will-know-bg.png);
+  background-image: url(../img/will-know-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -19,17 +18,28 @@
 .knowledge__list {
   display: flex;
   flex-direction: column;
-
-  list-style: none;
-
   padding: 0;
   margin: 0;
+
+  list-style: none;
 }
 
 .knowledge__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.knowledge__safety {
+  padding: 30px 0;
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 32px;
+  color: @action-color;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 
@@ -43,12 +53,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    list-style: none;
-
     padding: 0;
     padding-bottom: 30px;
     margin: 0 auto;
+
+    list-style: none;
   }
 
   .knowledge__item {
@@ -57,7 +66,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     margin-right: 70px;
 
     &:nth-child(2n) {
@@ -79,7 +87,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-
     padding: 0;
     padding-bottom: 30px;
     margin: 0;
@@ -89,7 +96,6 @@
     flex: auto;
     display: flex;
     flex-direction: row;
-
     margin: 0;
 
     &:nth-child(2n) {

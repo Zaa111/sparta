@@ -3,22 +3,24 @@
 }
 
 .promo__highlight {
-  font-size: 102px;
-  line-height: 90px;
-  color: @action-color;
-  text-transform: uppercase;
-  font-family: "Besom", "Arial";
   display: block;
   margin-bottom: 15px;
+
+  font-size: 102px;
+  line-height: 90px;
+  font-family: "Besom", "Arial";
+  color: @action-color;
+  text-transform: uppercase;
 }
 
 .promo__title {
-  font-size: 33px;
-  color: #ffffff;
-  font-weight: 800;
   margin: 0;
   padding: 0;
+
+  font-size: 33px;
+  font-weight: 800;
   margin-bottom: 37px;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -30,70 +32,76 @@
 }
 
 .promo__list {
-  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 205px;
   margin: 0;
   padding: 0;
-  display: flex;
-  width: 205px;
-  justify-content: space-between;
   margin-right: 13px;
+
+  list-style: none;
 }
 
 .promo__day {
-  margin: 0;
-  padding: 0;
-  font-weight: 800;
-  background-color: #ffffff;
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  font-weight: 800;
   line-height: 30px;
+  text-align: center;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+
   &--center {
     position: relative;
+
     &::before {
-      content: "";
-      width: 58px;
-      height: 5px;
       position: absolute;
       top: 50%;
       left: 100%;
+
+      width: 58px;
+      height: 5px;
       margin-top: -2.5px;
+
+      content: "";
       background-color: #ffffff;
     }
 
     &::after {
-      content: "";
-      width: 58px;
-      height: 5px;
       position: absolute;
       top: 50%;
       right: 100%;
+
+      width: 58px;
+      height: 5px;
       margin-top: -2.5px;
+
+      content: "";
       background-color: #ffffff;
     }
   }
 }
 
 .promo__desc {
-  font-size: 14px;
-  font-weight: 300;
-  color: #ffffff;
+  width: 80px;
   padding: 0;
   margin: 0;
-  width: 80px;
+
+  font-size: 14px;
+  font-weight: 300;
   line-height: 16px;
+  color: #ffffff;
 }
 
 .promo__button {
-  display: block;
-  width: 307px;
-  height: 73px;
-  text-align: center;
-  line-height: 73px;
   margin: 0 auto;
 
-  background-image: url(../img/button-bg.png);
+  text-align: center;
 }
 
 

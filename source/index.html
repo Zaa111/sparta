@@ -12,10 +12,13 @@
   <link rel="preload" href="fonts/Core-Sans-Heavy.woff2" as="font">
   <link rel="preload" href="fonts/Core-Sans-Medium.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3f39ef9c-f3d9-4e2f-8cdd-f283c38881b6&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="js/icon-customImage.js"></script>
   <title>Sparta</title>
 </head>
 
-<body>
+<body class="no-scroll">
   <div class="bg-wrapper">
     <header class="header container">
       <div class="header__wrapper">
@@ -23,14 +26,12 @@
           <picture>
             <source srcset="img/sparta-logo-tablet.png" media="(min-width: 750px)">
             <img class="header__logo-img" src="img/logo.svg" alt="Лого сайта Sparta" width="58" height="58">
-
           </picture>
         </a>
         <p class="header__title">спецкурс</p>
-        <a class="header__tel" href="tel:+7 (930) 415 02 52">+7 (930) 415 02 52</a>
+        <a class="header__tel" href="tel:+7(930)4150252">+7 (930) 415 02 52</a>
       </div>
-      <section class="promo">
-        <!-- <h2 class="visually-hidden">Промо секция сайта Sparta</h2> -->
+      <div class="promo">
         <p class="promo__title"><span class="promo__highlight">Выжить</span>Любой ценой</p>
         <div class="promo__wrapper">
           <ul class="promo__list">
@@ -47,75 +48,90 @@
           <p class="promo__desc">3 дня с утра до вечера</p>
         </div>
         <a class="button-action promo__button" href="#">Рискнуть</a>
-      </section>
+      </div>
     </header>
   </div>
   <main>
     <h1 class="visually-hidden">Главная страница сайта Sparta</h1>
 
-    <section class="expectations container">
+    <section class="expectations">
       <h2 class="expectations__title">Что вас ждёт</h2>
-      <ul class="expectations__list">
-        <li class="expectations__item exp-item exp-item--start">
-          <p class="exp-item__start">Start</p>
-        </li>
-        <li class="expectations__item exp-item exp-item--left">
-          <img class="exp-item__img exp-item-img exp-item-img--first" src="../img/expectations-1.png" alt="" width="290"
-            height="273">
-          <div class="exp-item__inner-text">
-            <h3 class="exp-item__title">Спецзнания</h3>
-            <p class="exp-item__desc">За 3 дня спецкурса вы получите знания,
-              которым обучают военных, альпинистов,
-              спасателей
-            </p>
-          </div>
-        </li>
-        <li class="expectations__item exp-item exp-item--right">
-          <img class="exp-item__img exp-item-img exp-item-img--second" src="../img/expectations-2.png" alt=""
-            width="291" height="243">
-          <div class="exp-item__inner-text">
-            <h3 class="exp-item__title">Спецнавыки</h3>
-            <p class="exp-item__desc">3 дня в лесу, без палаток, зажигалок
-              и любых других гаджетов, которые
-              облегчали бы жизнь
-            </p>
-          </div>
-        </li>
-        <li class="expectations__item exp-item exp-item--left">
-          <img class="exp-item__img exp-item-img exp-item-img--third" src="../img/expectations-3.png" alt="" width="320"
-            height="333">
-          <div class="exp-item__inner-text">
-            <h3 class="exp-item__title">Экстрим</h3>
-            <p class="exp-item__desc">Смоделированные экстремальные
-              ситуации, максимально приближенные
-              к реальности. Вам придётся спасать
-              утопающих из воды, спускаться по верёвке по отвесным скалам,
-              добывать воду, жить в шалашах и землянках
-            </p>
-          </div>
-        </li>
-        <li class="expectations__item exp-item exp-item--right">
-          <img class="exp-item__img exp-item-img exp-item-img--fourth" src="../img/expectations-4.png" alt=""
-            width="294" height="241">
-          <div class="exp-item__inner-text">
-            <h3 class="exp-item__title">Постоянный стресс</h3>
-            <p class="exp-item__desc exp-item-desc--padding">Участникам предстоит преодолевая
-              себя действовать в стрессовой
-              обстановке, применять на практике
-              полученные ранее знания
-            </p>
-          </div>
-        </li>
-        <li class="expectations__item exp-item exp-item--finish">
-          <p class="exp-item__finish">Finish</p>
-        </li>
-      </ul>
+      <div class="container">
+        <ul class="expectations__list">
+          <li class="expectations__item exp-item exp-item--start">
+            <p class="exp-item__start">Start</p>
+          </li>
+          <li class="expectations__item exp-item exp-item--left">
+            <picture>
+              <source type="image/webp" srcset="img/expectations-1.webp">
+              <img class="exp-item__img exp-item-img exp-item-img--first" src="img/expectations-1.jpg" alt=""
+                width="290" height="273">
+            </picture>
+            <div class="exp-item__inner-text">
+              <h3 class="exp-item__title">Спецзнания</h3>
+              <p class="exp-item__desc">За 3 дня спецкурса вы получите знания,
+                которым обучают военных, альпинистов,
+                спасателей
+              </p>
+            </div>
+          </li>
+          <li class="expectations__item exp-item exp-item--right">
+            <picture>
+              <source type="image/webp" srcset="img/expectations-2.webp">
+              <img class="exp-item__img exp-item-img exp-item-img--second" src="img/expectations-2.jpg" alt=""
+                width="291" height="243">
+            </picture>
+            <div class="exp-item__inner-text">
+              <h3 class="exp-item__title">Спецнавыки</h3>
+              <p class="exp-item__desc">3 дня в лесу, без палаток, зажигалок
+                и любых других гаджетов, которые
+                облегчали бы жизнь
+              </p>
+            </div>
+          </li>
+          <li class="expectations__item exp-item exp-item--left">
+            <picture>
+              <source type="image/webp" srcset="img/expectations-3.webp">
+              <img class="exp-item__img exp-item-img exp-item-img--third" src="img/expectations-3.jpg" alt=""
+                width="320" height="333">
+            </picture>
+            <div class="exp-item__inner-text">
+              <h3 class="exp-item__title">Экстрим</h3>
+              <p class="exp-item__desc">Смоделированные экстремальные
+                ситуации, максимально приближенные
+                к реальности. Вам придётся спасать
+                утопающих из воды, спускаться по верёвке по отвесным скалам,
+                добывать воду, жить в шалашах и землянках
+              </p>
+            </div>
+          </li>
+          <li class="expectations__item exp-item exp-item--right">
+            <picture>
+              <source type="image/webp" srcset="img/expectations-4.webp">
+              <img class="exp-item__img exp-item-img exp-item-img--fourth" src="img/expectations-4.jpg" alt=""
+                width="294" height="241">
+            </picture>
+            <div class="exp-item__inner-text">
+              <h3 class="exp-item__title">Постоянный стресс</h3>
+              <p class="exp-item__desc exp-item-desc exp-item-desc--padding">Участникам предстоит преодолевая
+                себя действовать в стрессовой
+                обстановке, применять на практике
+                полученные ранее знания
+              </p>
+            </div>
+          </li>
+          <li class="expectations__item exp-item exp-item--finish">
+            <p class="exp-item__finish">Finish</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section class="advantages container">
-      <h2 class="visually-hidden">Что вы получаете</h2>
-      <div class="advantages__wrapper-action">
-        <div class="advantages__wrapper">
+    <section class="advantages">
+      <div class="container">
+        <h2 class="visually-hidden">Что вы получаете</h2>
+        <div class="advantages__wrapper-action">
+          <!-- <div class="advantages__wrapper"> -->
           <p class="advantages__subtitle">Что даёт наш спецкурс</p>
           <ul class="advantages__list">
             <li class="advantages__item adv-item">
@@ -137,135 +153,162 @@
               </p>
             </li>
           </ul>
+          <!-- </div> -->
+        </div>
+        <div class="advantages__wrapper disadvantages">
+          <p class="disadvantages__subtitle">Чего не будет</p>
+          <ul class="disadvantages__list">
+            <li class="disadvantages__item disadv-item">
+              <h3 class="disadv-item__title">Нет скуке!</h3>
+              <p class="disadv-item__desc">Не будет скучной и нудной теории.
+                Курс состоит на 80% из практики
+                и только на 20% из теории!
+              </p>
+            </li>
+            <li class="disadvantages__item disadv-item">
+              <h3 class="disadv-item__title">И вакханалиям</h3>
+              <p class="disadv-item__desc">Никаких песен у костра
+                и алкопоходов. Только хардкор!
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="advantages__wrapper disadvantages">
-        <p class="disadvantages__subtitle">Чего не будет</p>
-        <ul class="disadvantages__list">
-          <li class="disadvantages__item disadv-item">
-            <h3 class="disadv-item__title">Нет скуке!</h3>
-            <p class="disadv-item__desc">Не будет скучной и нудной теории.
-              Курс состоит на 80% из практики
-              и только на 20% из теории!
-            </p>
+    </section>
+
+    <section class="knowledge">
+      <h2 class="knowledge__title">ты узнаешь, что делать</h2>
+      <div class="container">
+        <ul class="knowledge__list">
+          <li class="knowledge__item knowledge-item">
+            <picture>
+              <source type="image/webp" srcset="img/01-what-to-do.webp">
+              <img class="knowledge-item__img" src="img/01-what-to-do.jpg" alt="Порядковый номер" width="110"
+                height="94">
+            </picture>
+            <div class="knowledge-item__inner-text">
+              <h3 class="knowledge-item__title">Если заблудился</h3>
+              <p class="knowledge-item__desc">Как быть, если заблудился и остался один в лесу,
+                как не умереть от голода и холода, сделать себе ночлег,
+                развести огонь без спичек.
+              </p>
+            </div>
           </li>
-          <li class="disadvantages__item disadv-item">
-            <h3 class="disadv-item__title">И вакханалиям</h3>
-            <p class="disadv-item__desc">Никаких песен у костра
-              и алкопоходов. Только хардкор!
-            </p>
+          <li class="knowledge__item knowledge-item">
+            <picture>
+              <source type="image/webp" srcset="img/02-what-to-do.webp">
+              <img class="knowledge-item__img" src="img/02-what-to-do.jpg" alt="Порядковый номер" width="118"
+                height="92">
+            </picture>
+            <div class="knowledge-item__inner-text">
+              <h3 class="knowledge-item__title">Если встретил диких зверей</h3>
+              <p class="knowledge-item__desc">Как вести себя в экстремальной ситуации при встрече с лесными животными,
+                даже
+                если «вон та киса» выглядит такой мирной.</p>
+            </div>
+          </li>
+          <li class="knowledge__item knowledge-item">
+            <picture>
+              <source type="image/webp" srcset="img/03-what-to-do.webp">
+              <img class="knowledge-item__img" src="img/03-what-to-do.jpg" alt="Порядковый номер" width="121"
+                height="92">
+            </picture>
+            <div class="knowledge-item__inner-text">
+              <h3 class="knowledge-item__title">Если нужна первая помощь</h3>
+              <p class="knowledge-item__desc">Ты узнаешь, что делать, если человеку стало плохо, как оказать самопомощь,
+                как
+                вынести пострадавшего из зоны поражения.</p>
+            </div>
+          </li>
+          <li class="knowledge__item knowledge-item">
+            <picture>
+              <source type="image/webp" srcset="img/04-what-to-do.webp">
+              <img class="knowledge-item__img" src="img/04-what-to-do.jpg" alt="Порядковый номер" width="111"
+                height="96">
+            </picture>
+            <div class="knowledge-item__inner-text">
+              <h3 class="knowledge-item__title">Если оказался в воде</h3>
+              <p class="knowledge-item__desc">Как спасти утопающего. Как не замёрзнуть и просушить одежду. Как подать
+                сигнал
+                SOS.</p>
+            </div>
+          </li>
+          <li class="knowledge__item knowledge-item">
+            <picture>
+              <source type="image/webp" srcset="img/05-what-to-do.webp">
+              <img class="knowledge-item__img" src="img/05-what-to-do.jpg" alt="Порядковый номер" width="115"
+                height="96">
+            </picture>
+            <div class="knowledge-item__inner-text">
+              <h3 class="knowledge-item__title">Если грозит опасность</h3>
+              <p class="knowledge-item__desc">Узнаешь рабочие алгоритмы действий в различных экстренных ситуациях
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="knowledge__safety">Также курс включает в себя блок по безопасности в городе</p>
+        <ul class="safety-block">
+          <li class="safety-block__item">
+            <span class="safety-block__unit">1</span>
+            <p class="safety-block__desc">Блок по автомобильной безопасности.</p>
+          </li>
+          <li class="safety-block__item">
+            <span class="safety-block__unit safety-block__unit--two">2</span>
+            <p class="safety-block__desc">Народные волнения, давки, теракты.</p>
+          </li>
+          <li class="safety-block__item">
+            <span class="safety-block__unit">3</span>
+            <p class="safety-block__desc">Техногенные и природные катастрофы.</p>
+          </li>
+          <li class="safety-block__item">
+            <span class="safety-block__unit  safety-block__unit--four">4</span>
+            <p class="safety-block__desc">Что должно быть в EDC наборе.</p>
+          </li>
+          <li class="safety-block__item">
+            <span class="safety-block__unit">5</span>
+            <p class="safety-block__desc">Как действовать во время пожара?</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="knowledge container">
-      <h2 class="knowledge__title">ты узнаешь, что делать</h2>
-      <ul class="knowledge__list">
-        <li class="knowledge__item knowledge-item">
-          <img class="knowledge-item__img" src="img/01-what-to-do.png" alt="Порядковый номер" width="110" height="94">
-          <div class="knowledge-item__inner-text">
-            <h3 class="knowledge-item__title">Если заблудился</h3>
-            <p class="knowledge-item__desc">Как быть, если заблудился и остался один в лесу,
-              как не умереть от голода и холода, сделать себе ночлег,
-              развести огонь без спичек.
-            </p>
-          </div>
-        </li>
-        <li class="knowledge__item knowledge-item">
-          <img class="knowledge-item__img" src="img/02-what-to-do.png" alt="Порядковый номер" width="118" height="92">
-          <div class="knowledge-item__inner-text">
-            <h3 class="knowledge-item__title">Если встретил диких зверей</h3>
-            <p class="knowledge-item__desc">Как вести себя в экстремальной ситуации при встрече с лесными животными,
-              даже
-              если «вон та киса» выглядит такой мирной.</p>
-          </div>
-        </li>
-        <li class="knowledge__item knowledge-item">
-          <img class="knowledge-item__img" src="img/03-what-to-do.png" alt="Порядковый номер" width="121" height="92">
-          <div class="knowledge-item__inner-text">
-            <h3 class="knowledge-item__title">Если нужна первая помощь</h3>
-            <p class="knowledge-item__desc">Ты узнаешь, что делать, если человеку стало плохо, как оказать самопомощь,
-              как
-              вынести пострадавшего из зоны поражения.</p>
-          </div>
-        </li>
-        <li class="knowledge__item knowledge-item">
-          <img class="knowledge-item__img" src="img/04-what-to-do.png" alt="Порядковый номер" width="111" height="96">
-          <div class="knowledge-item__inner-text">
-            <h3 class="knowledge-item__title">Если оказался в воде</h3>
-            <p class="knowledge-item__desc">Как спасти утопающего. Как не замёрзнуть и просушить одежду. Как подать
-              сигнал
-              SOS.</p>
-          </div>
-        </li>
-        <li class="knowledge__item knowledge-item">
-          <img class="knowledge-item__img" src="img/05-what-to-do.png" alt="Порядковый номер" width="115" height="96">
-          <div class="knowledge-item__inner-text">
-            <h3 class="knowledge-item__title">Если грозит опасность</h3>
-            <p class="knowledge-item__desc">Узнаешь рабочие алгоритмы действий в различных экстренных ситуациях
-            </p>
-          </div>
-        </li>
-      </ul>
-
-      <p class="knowledge__safety safety-block">Также курс включает в себя блок по безопасности в городе</p>
-      <ul class="safety-block__list">
-        <li class="safety-block__item">
-          <span class="safety-block__unit">1</span>
-          <p class="safety-block__desc">Блок по автомобильной безопасности.</p>
-        </li>
-        <li class="safety-block__item">
-          <span class="safety-block__unit safety-block__unit--two">2</span>
-          <p class="safety-block__desc">Народные волнения, давки, теракты.</p>
-        </li>
-        <li class="safety-block__item">
-          <span class="safety-block__unit">3</span>
-          <p class="safety-block__desc">Техногенные и природные катастрофы.</p>
-        </li>
-        <li class="safety-block__item">
-          <span class="safety-block__unit  safety-block__unit--four">4</span>
-          <p class="safety-block__desc">Что должно быть в EDC наборе.</p>
-        </li>
-        <li class="safety-block__item">
-          <span class="safety-block__unit">5</span>
-          <p class="safety-block__desc">Как действовать во время пожара?</p>
-        </li>
-      </ul>
-    </section>
-
     <section class="action">
+      <h2 class="visually-hidden">Кнопка записи</h2>
       <div class="container">
         <p class="action__desc"><span class="action__challenge">испытай</span>себя на прочность</p>
         <a class="action__button button-action" href="#">Рискнуть</a>
       </div>
     </section>
 
-    <section class="skills container">
+    <section class="skills">
       <h2 class="skills__title">ты приобретёшь навык</h2>
-      <ul class="skills__list">
-        <li class="skills__item">
-          <p class="skills__desc">Освоишь больше десятка узлов</p>
-        </li>
-        <li class="skills__item">
-          <p class="skills__desc">Побываешь в роли пострадавшего и спасателя</p>
-        </li>
-        <li class="skills__item">
-          <p class="skills__desc">Проведёшь ночь в партизанском укрытии</p>
-        </li>
-        <li class="skills__item">
-          <p class="skills__desc">Попробуешь себя в роли Леонардо ДиКаприо в фильме «Выживший»</p>
-        </li>
-        <li class="skills__item">
-          <p class="skills__desc">Получишь море адреналина, но самое главное - бесценный опыт, который останется с тобой
-            на всю жизнь</p>
-        </li>
-      </ul>
+      <div class="container">
+        <ul class="skills__list">
+          <li class="skills__item">
+            <p class="skills__desc">Освоишь больше десятка узлов</p>
+          </li>
+          <li class="skills__item">
+            <p class="skills__desc">Побываешь в роли пострадавшего и спасателя</p>
+          </li>
+          <li class="skills__item">
+            <p class="skills__desc">Проведёшь ночь в партизанском укрытии</p>
+          </li>
+          <li class="skills__item">
+            <p class="skills__desc">Попробуешь себя в роли Леонардо ДиКаприо в фильме «Выживший»</p>
+          </li>
+          <li class="skills__item">
+            <p class="skills__desc">Получишь море адреналина, но самое главное - бесценный опыт, который останется с
+              тобой
+              на всю жизнь</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="plan">
-      <div class="plan__wrapper container">
-        <h2 class="plan__title">в Программе спецкурса</h2>
+      <h2 class="plan__title">в Программе спецкурса</h2>
+      <div class="container">
         <ul class="plan__list">
           <li class="plan__item">
             <span class="plan__unit">01</span>
@@ -324,91 +367,122 @@
       </picture>
     </section>
 
-    <section class="card container">
+    <section class="card">
       <h2 class="card__title">Инструктор</h2>
-      <div class="card__inner-wrapper">
-        <img class="card__img" src="https://via.placeholder.com/290" alt="Фотография инструктора Роман Попков" width="290"
-          height="290">
-        <div class="card__desc-left">
-          <p class="card__name">Роман Попков</p>
-          <div class="card__flex-wrapper">
-            <p class="card__desc">Альпинист</p>
-            <p class="card__desc">8 восхождений на Эльбрус (Западная и Восточная вершины), восхождение на Монблан.
-              Неоднократно принимал участие в спасательных работах в горах.
-              Спас двоих человек на вершине Эльбруса в снежную бурю
-            </p>
-            <p class="card__desc">Обучался у военных, горных и инструкторов по туризму</p>
-          <!-- </div> -->
-          <!-- <div class="card__desc-right"> -->
-            <p class="card__desc">Обучался в центре подготовки спасателей</p>
-            <p class="card__desc">Инструктор по первой помощи по программе Красного Креста</p>
-            <p class="card__desc">Обучение и подготовка в Центре медицины катастроф</p>
-            <p class="card__desc card__desc--last-margin">Дайвер</p>
+      <div class="container">
+        <div class="card__inner-wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/card-photo-1070.webp" media="(min-width: 1170px)">
+            <source type="image/webp" srcset="img/card-photo-320.webp">
+
+            <source srcset="img/card-photo-1070.jpg" media="(min-width: 1170px)">
+            <img class="card__img" src="img/card-photo-320.jpg" alt="Фотография инструктора Роман Попков" width="290"
+              height="290">
+          </picture>
+          <div class="card__desc-left">
+            <p class="card__name">Роман Попков</p>
+            <div class="card__flex-wrapper">
+              <p class="card__desc">Альпинист</p>
+              <p class="card__desc">8 восхождений на Эльбрус (Западная и Восточная вершины), восхождение на Монблан.
+                Неоднократно принимал участие в спасательных работах в горах.
+                Спас двоих человек на вершине Эльбруса в снежную бурю
+              </p>
+              <p class="card__desc">Обучался у военных, горных и инструкторов по туризму</p>
+              <!-- </div> -->
+              <!-- <div class="card__desc-right"> -->
+              <p class="card__desc">Обучался в центре подготовки спасателей</p>
+              <p class="card__desc">Инструктор по первой помощи по программе Красного Креста</p>
+              <p class="card__desc">Обучение и подготовка в Центре медицины катастроф</p>
+              <p class="card__desc card__desc--last-margin">Дайвер</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <ul class="card__list">
-        <li class="card__item">
-          <span class="card__unit">27</span>
-          <p class="card__dignity">Спарт провел в качестве капитана</p>
-        </li>
-        <li class="card__item">
-          <span class="card__unit">28</span>
-          <p class="card__dignity">прыжков с веревкой (Rope Jumping)</p>
-        </li>
-        <li class="card__item">
-          <span class="card__unit">05</span>
-          <p class="card__dignity">Спарт организовал (максимальный поток 68 чел.)</p>
-        </li>
-        <li class="card__item">
-          <span class="card__unit">35</span>
-          <p class="card__dignity">Боёв в Бойцовском Клубе</p>
-        </li>
-      </ul>
+        <ul class="card__list">
+          <li class="card__item">
+            <span class="card__unit">27</span>
+            <p class="card__dignity">Спарт провел в качестве капитана</p>
+          </li>
+          <li class="card__item">
+            <span class="card__unit">28</span>
+            <p class="card__dignity">прыжков с веревкой (Rope Jumping)</p>
+          </li>
+          <li class="card__item">
+            <span class="card__unit">05</span>
+            <p class="card__dignity">Спарт организовал (максимальный поток 68 чел.)</p>
+          </li>
+          <li class="card__item">
+            <span class="card__unit">35</span>
+            <p class="card__dignity">Боёв в Бойцовском Клубе</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <section class="action">
+      <h2 class="visually-hidden">Кнопка записи</h2>
       <div class="container">
         <p class="action__desc"><span class="action__challenge">испытай</span>себя на прочность</p>
         <a class="action__button button-action" href="#">Рискнуть</a>
       </div>
     </section>
 
-    <section class="reviews container">
+    <section class="reviews">
       <h2 class="reviews__title">Отзывы</h2>
-      <picture>
-        <source srcset="img/reviews-video-1070.png" media="(min-width: 1170px)">
-        <source srcset="img/reviews-video-750.png" media="(min-width: 750px)">
-        <img class="reviews__bg-video" src="img/reviews-video.png" alt="Фоновая картинка" width="292" height="164">
-      </picture>
-      <div class="reviews__wrapper">
-        <img class="reviews__photo" src="https://via.placeholder.com/117x156" alt="">
-        <div class="reviews__wrapper-text">
-          <p class="reviews__name">Дмитрий Весна</p>
-          <p class="reviews__desc">Я, Выжил!!!! Такого треша в жизни у меня не было. Не думал даже, что на такое способен
-            в последнее время.
-            Ни какое КМБ и прочее с этим не сравнится. Каждый день плавать в одежде в речках (а это Мурманск детка),
-            спать по 2 часа или совсем не спать, потому что надо совершать марш броски с пострадавшим в 140 кг. ,
-            освоить альпинизм и совершать самостоятельные<span class="visually-hidden">спуски и подъемы с крутых скал за 1 день, делать носилки
-              за 5 минут из подручных средств, есть ягоды по пол дня, потому что другой еды нет, пить только из речки,
-              ходить босиком по лесу весь день, делать укрытия, о которых даже в детстве не мечтал, спать под открытым
-              небом без спальников... и палаток, и постоянно кого то спасать, оказывать первую помощь, учиться быстро
-              договариваться с людьми, которых видишь первый день, а также работать в команде с ними,потому что ваши Жизни,
-              только вь вначинался Ад!!!</span>
-          </p>
-          <a class="reviews__full-text" href="#">Читать весь отзыв</a>
+      <div class="container">
+        <div class="reviews__video-wrapper">
+          <iframe class="reviews__video" src="https://www.youtube.com/embed/olJBePS3b_A" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- <picture class="reviews__image-wrapper">
+          <source type="image/webp" srcset="img/reviews-video-1070.webp" media="(min-width: 1170px)">
+          <source type="image/webp" srcset="img/reviews-video-750.webp" media="(min-width: 750px)">
+          <source type="image/webp" srcset="img/reviews-video.webp">
+
+          <source srcset="img/reviews-video-1070.jpg" media="(min-width: 1170px)">
+          <source srcset="img/reviews-video-750.jpg" media="(min-width: 750px)">
+          <img class="reviews__bg-video" src="img/reviews-video.jpg" alt="Фоновая картинка" width="292" height="164">
+        </picture> -->
+        <div class="reviews__wrapper">
+          <picture>
+            <source type="image/webp" srcset="img/reviews-photo-1070.webp" media="(min-width: 1170px)">
+            <source type="image/webp" srcset="img/reviews-photo-750.webp" media="(min-width: 750px)">
+            <source type="image/webp" srcset="img/reviews-photo-320.webp">
+
+            <source srcset="img/reviews-photo-1070.jpg" media="(min-width: 1170px)">
+            <source srcset="img/reviews-photo-750.jpg" media="(min-width: 750px)">
+            <img class="reviews__photo" src="img/reviews-photo-320.jpg" alt="" width="117" height="156">
+          </picture>
+          <div class="reviews__wrapper-text">
+            <p class="reviews__name">Дмитрий Весна</p>
+            <p class="reviews__desc">Я, Выжил!!!! Такого треша в жизни у меня не было. Не думал даже, что на такое
+              способен
+              в последнее время.
+              Ни какое КМБ и прочее с этим не сравнится. Каждый день плавать в одежде в речках (а это Мурманск детка),
+              спать по 2 часа или совсем не спать, потому что надо совершать марш броски с пострадавшим в 140 кг. ,
+              освоить альпинизм и совершать самостоятельные<span class="visually-hidden">спуски и подъемы с крутых скал
+                за 1 день, делать носилки
+                за 5 минут из подручных средств, есть ягоды по пол дня, потому что другой еды нет, пить только из речки,
+                ходить босиком по лесу весь день, делать укрытия, о которых даже в детстве не мечтал, спать под открытым
+                небом без спальников... и палаток, и постоянно кого то спасать, оказывать первую помощь, учиться быстро
+                договариваться с людьми, которых видишь первый день, а также работать в команде с ними,потому что ваши
+                Жизни,
+                только вь вначинался Ад!!!</span>
+            </p>
+            <a class="reviews__full-text" href="#">Читать весь отзыв</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="map">
       <h2 class="map__title">География проведения</h2>
-      <picture>
+        <div id="map"></div>
+      <!-- <picture>
         <source srcset="img/map-1070.png" media="(min-width: 1170px)">
         <source srcset="img/map-750.png" media="(min-width: 750px)">
         <img class="map__img" src="img/map.png" alt="Карта проведения" width="320" height="489">
-      </picture>
+      </picture> -->
     </section>
 
     <section class="form">
@@ -431,12 +505,35 @@
   </main>
 
   <footer class="footer container">
-    <a class="footer__tel" href="tel:+7 (930) 415 02 52">+7 (930) 415 02 52</a>
+    <a class="footer__tel" href="tel:+7(930)4150252">+7 (930) 415 02 52</a>
     <a class="footer__confidential" href="#">Политика конфиденциальности</a>
     <a class="footer__logo" href="#">
       <img class="footer__logo-img" src="img/footer-logo.png" alt="Лого сайта Sparta" width="156" height="56">
     </a>
   </footer>
+
+  <!-- Модальное окно -->
+
+  <!-- <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close" type="button">
+        <img src="img/close-modal.png" alt="Закрыть">
+      </button>
+    </div>
+  </div> -->
+
+
+
+  <!-- <script type="text/javascript">
+  ymaps.ready(init);
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        center: [55.76, 37.64],
+        zoom: 7
+      });
+    }
+  </script> -->
+
 </body>
 
 </html>
